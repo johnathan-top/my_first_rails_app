@@ -10,8 +10,17 @@ gem 'rails', '~> 5.2.2'
 #formely this
 #gem 'sqlite3'
 
+#then this
+#gem 'sqlite3', '~> 1.3.6'
+
 #now this
-gem 'sqlite3', '~> 1.3.6'
+group :development, :test do
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+end
 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
